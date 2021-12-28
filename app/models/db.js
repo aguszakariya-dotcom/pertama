@@ -1,5 +1,7 @@
 
 const chalk = require ('chalk')
+const chalkAnimation = require ('chalk-animation')
+
 //driver mysql
 const mysql = require("mysql");
 //load konfigurasi database
@@ -14,11 +16,18 @@ const connection = mysql.createConnection({
   database: dbConfig.DB
 });
 //==============================================================================================================
+const rainbow = chalkAnimation.rainbow("Anda Berhasil terhubung pada Database, pada port 3300")
+setTimeout(() => {
+  rainbow.stop(); // Animation stops
+}, 1000);
 
+setTimeout(() => {
+  rainbow.start(); // Animation resumes
+}, 2000);
 // buka koneksi ke dbms
 connection.connect(error => {
   if (error) throw error;
-  console.log(chalk.magenta.bgBlack.bold("Anda Berhasil terhubung pada Database..."));
+  console.log(chalkAnimation.rainbow("terhubung pada Database..."));
 });
 
 module.exports = connection;
