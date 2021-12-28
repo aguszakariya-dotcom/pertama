@@ -1,6 +1,4 @@
 
-# hahaha apa kabar ini
-
-*ini dinama*
-# apa aja dan dimana saja
+malikkurosaki
+"ayo di up"
 
