@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/aguszakariya-dotcom/pertama/issues"
   },
-  "homepage": "https://github.com/aguszakariya-dotcom/pertama#readme"
+  "homepage": "https://github.com/aguszakariya-dotcom/pertama#readme",
+  "dependencies": {
+    "express-flash": "^0.0.2",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1"
+  }
 }
