@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs')
 // halaman yg di sidebar
 app.get('/', (req, res)=>{
-    res.render('index', {nama: 'agus zakariya', title: 'Home | Database'})
+    res.render('index', {nama: 'ini dimana?', title: 'Home | Database'})
 })
 app.get('/nota', (req, res)=>{
     res.render('nota.ejs', {title: 'Nota | Database'})
