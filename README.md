@@ -1,4 +1,0 @@
-
-malikkurosaki
-"ayo di up"
-
