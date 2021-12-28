@@ -8,8 +8,8 @@ const path = require('path');
 var cookieParser = require('cookie-parser')
 const logger = require('morgan');
 // library ==========================================/
-const flash = require('express-flash');
-const session = require('express-session');
+var flash = require('express-flash');
+var session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
@@ -31,11 +31,22 @@ app.use(session({
         maxAge: 6000
     },
     store: new session.MemoryStore,
+    
+    resave: true,
     saveUninitalized: true,
-    secret: 'secret'
+    // secret: 'secret'
 }))
 
+app.use(flash())
+
+app.use('/', indexRouter);
+app.use('/users', userRouter);
+app.use('/posts', postRouter);
 // error handler ===========================================/
+app.use(function(req, res, next) {
+    next(createError(404));
+})
+
 app.use(function(err, req, res, next) {
     // set local, ketika error terjadi
     res.locals.message = err.message;
