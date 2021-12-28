@@ -27,7 +27,7 @@ setTimeout(() => {
 // buka koneksi ke dbms
 connection.connect(error => {
   if (error) throw error;
-  console.log(chalkAnimation.rainbow("terhubung pada Database..."));
+  console.log(chalkAnimation.rainbow("sukses..."));
 });
 
 module.exports = connection;
